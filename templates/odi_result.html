@@ -1,0 +1,176 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>First Innings Score Predictor</title>
+        <link rel="shortcut icon" href="{% static '/images/odi_img/odi-favicon-icon.ico' %}">
+
+        <!-- Font Family -->
+          <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+          <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+        <!-- CSS -->
+          <link rel="stylesheet" type="text/css" href="{% static '/css/odi_t20_styles.css' %}">
+    </head>
+
+    <body>
+       <!-- header -->
+          <header>
+                 <nav>
+                      <div class="logo"> 
+                      <h1 class=" "> First Innings Score Predictor </h1>
+                      </div>
+                      <div class="menu">
+                            <a href="https://www.google.com/search?q=india+vs+england&oq=india&aqs=chrome.3.69i57j46i433j0j0i131i433j0i433j69i60j69i61j69i60.9775j0j7&sourceid=chrome&ie=UTF-8" target="_blank"> Live Score </a>
+                            <a href="https://www.tv9marathi.com/category/sports" target="_blank"> Sport News </a>
+                     </div>
+                </nav>
+         </header>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class='heading_first'>First Innings Score Predictor for </span><span class="heading_second">One Day International (ODI)</span></h2>
+    	</div>
+
+        <!-- Prediction Area -->
+        <div class="prediction-area">
+
+            <!-- IPL Banner - 1 -->
+            <div class='ipl-banner-left'>
+
+                <div class="slider-frame">
+                    <div class="slide-images-up">
+
+                        <!-- Image-1 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{% static '/images/odi_img/virat.png' %}" alt="Virat Kohli"/>
+                        </div>
+                        <!-- Image-2 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{% static '/images/odi_img/msd.png' %}" alt="MS Dhoni"/>
+                        </div>
+                        <!-- Image-3 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{% static '/images/odi_img/bhaji.png' %}" alt="Harbhajan Singh"/>
+                        </div>
+                        <!-- Image-4 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{% static '/images/odi_img/gautam.png' %}" alt="Gautam Gambhir"/>
+                        </div>
+                        <!-- Image-5 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{% static '/images/odi_img/khan.png' %}" alt="Zaheer Khan"/>
+                        </div>
+                        <!-- Image-6 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{% static '/images/odi_img/munaf.png' %}" alt="Munaf Patel"/>
+                        </div>
+                        <!-- Image-7 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{% static '/images/odi_img/raina.png' %}" alt="Suresh Raina"/>
+                        </div>
+                        <!-- Image-8 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{% static '/images/odi_img/sehwag.png' %}" alt="Virendra Sehwag"/>
+                        </div>
+                        <!-- Image-9 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{% static '/images/odi_img/sreesanth.png' %}" alt="S.Sreesanth"/>
+                        </div>
+                        <!-- Image-10 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{% static '/images/odi_img/yuraj.png' %}" alt="Yuraj Singh"/>
+                        </div>
+                        <!-- Image-11 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{% static '/images/odi_img/sachin.png' %}" alt="Sachin Tendulakar"/>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+			<!-- Result -->
+			<div class="results">
+				<p class='result-p'>The final predicted score (range):<span> {{ lower_limit }} to {{ upper_limit }} </span></p>          
+			</div>
+                        
+            <!-- IPL Banner - 2 -->
+            <div class='ipl-banner-right'>
+
+                <div class="slider-frame">
+                    <div class="slide-images-down">
+
+                        <!-- Image-1 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{% static '/images/odi_img/virat.png' %}" alt="Virat Kohli"/>
+                        </div>
+                        <!-- Image-2 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{% static '/images/odi_img/msd.png' %}" alt="MS Dhoni"/>
+                        </div>
+                        <!-- Image-3 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{% static '/images/odi_img/bhaji.png' %}" alt="Harbhajan Singh"/>
+                        </div>
+                        <!-- Image-4 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{% static '/images/odi_img/gautam.png' %}" alt="Gautam Gambhir"/>
+                        </div>
+                        <!-- Image-5 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{%static '/images/odi_img/khan.png' %}" alt="Zaheer Khan"/>
+                        </div>
+                        <!-- Image-6 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{% static '/images/odi_img/raina.png' %}" alt="Suresh Raina"/>
+                        </div>
+                        <!-- Image-7 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{% static '/images/odi_img/munaf.png' %}" alt="Munaf Patel"/>
+                        </div>
+                        <!-- Image-8 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{% static '/images/odi_img/sehwag.png' %}" alt="Virendra Sehwag"/>
+                        </div>
+                        <!-- Image-9 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{% static '/images/odi_img/sreesanth.png' %}" alt="S.Sreesanth"/>
+                        </div>
+                        <!-- Image-10 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{% static '/images/odi_img/yuraj.png' %}" alt="Yuraj Singh"/>
+                        </div>
+                        <!-- Image-11 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{% static '/images/odi_img/sachin.png' %}" alt="Sachin Tendulakar"/>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="center">
+                                 <a class="back" href="https://cricket-first-innings-score.herokuapp.com/">&laquo; back to home  
+                                 </a>
+                        </div>
+                        
+      <!-- FOOTER -->
+      <div class="footer">
+         <div class="contact"> 
+               <a target="_blank" href="https://www.linkedin.com/in/gokul-patil-0a6a96189"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://github.com/gokul-patil0509/ODI-T20-IPL-First-Innings-Score-Prediction-Deployment"><i class="fab fa-github fa-lg contact-icon"></i></a>
+         </div>
+         <div class='description'>
+    		  <p>A Machine Learning Web App, Built with Django, Deployed using Heroku.</p>
+    	 </div>
+           <p class='footer-description'>Made with ❤️ by Gokul Patil.</p>
+      </div>
+
+    </body>
+</html>

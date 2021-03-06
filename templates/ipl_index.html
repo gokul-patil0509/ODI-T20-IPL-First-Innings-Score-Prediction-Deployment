@@ -1,0 +1,203 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>First Innings Score Predictor</title>
+        <link rel="shortcut icon" href="{% static '/images/ipl_img/ipl-favicon-icon.ico' %}">
+       
+        <!-- Font Family -->
+          <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+          <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+        <!-- CSS -->
+          <link rel="stylesheet" type="text/css" href="{% static '/css/ipl_styles.css' %}">
+    </head>
+
+    <body>
+      <!-- header -->
+          <header>
+                 <nav>
+                      <div class="logo"> 
+                      <h1 class=" "> First Innings Score Predictor </h1>
+                      </div>
+                      <div class="menu">
+                            <a href="https://www.google.com/search?q=india+vs+england&oq=india&aqs=chrome.3.69i57j46i433j0j0i131i433j0i433j69i60j69i61j69i60.9775j0j7&sourceid=chrome&ie=UTF-8" target="_blank"> Live Score </a>
+                            <a href="https://www.tv9marathi.com/category/sports" target="_blank"> Sport News </a>
+                     </div>
+                </nav>
+         </header>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class='heading_first'>First Innings Score Predictor for </span><span class="heading_second">Indian Premier League (IPL)</span></h2>
+            <div class='description'>
+    		  <p>  </p>
+    	    </div>
+    	</div>
+
+        <!-- Prediction Area -->
+        <div class="prediction-area">
+
+            <!-- IPL Banner - 1 -->
+            <div class='ipl-banner-left'>
+
+                <div class="slider-frame">
+                    <div class="slide-images-up">
+
+                        <!-- Image-1 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{% static '/images/ipl_img/rcb.png' %}" alt="Royal Challengers Bangalore">
+                        </div>
+                        <!-- Image-2 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{% static '/images/ipl_img/srh.png' %}" alt="Sunrisers Hyderabad">
+                        </div>
+                        <!-- Image-3 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{% static '/images/ipl_img/mi.png' %}" alt="Mumbai Indians">
+                        </div>
+                        <!-- Image-4 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{% static '/images/ipl_img/dc.png' %}" alt="Delhi Capitals">
+                        </div>
+                        <!-- Image-5 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{% static '/images/ipl_img/rr.png' %}" alt="Rajasthan Royals">
+                        </div>
+                        <!-- Image-6 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{% static '/images/ipl_img/kkr.png' %}" alt="Kolkata Knight Riders">
+                        </div>
+                        <!-- Image-7 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{% static '/images/ipl_img/kxip.png' %}" alt="Kings XI Punjab">
+                        </div>
+                        <!-- Image-8 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{% static '/images/ipl_img/csk.png' %}" alt="Chennai Super Kings">
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Prediction Form -->
+            <div class='div2'>
+                <form action="ipl_predict/"  method="POST">
+                    <!-- Batting Team Dropdown -->
+                     {% csrf_token %}
+                    <select class="form-input align-center" name="batting-team">
+                        <option value="none">--- Select a Batting team ---</option>
+                        <option value="Mumbai Indians">Mumbai Indians</option>
+                        <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+                        <option value="Chennai Super Kings">Chennai Super Kings</option>
+                        <option value="Rajasthan Royals">Rajasthan Royals</option>
+                        <option value="Kings XI Punjab">Kings XI Punjab</option>
+                        <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+                        <option value="Delhi Daredevils">Delhi Daredevils</option>
+                        <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+                    </select><br>
+                    <!-- Bowling Team Dropdown -->
+                     {% csrf_token %}
+                    <select class="form-input align-center" name="bowling-team">
+                        <option value="none">--- Select a Bowling team ---</option>
+                        <option value="Mumbai Indians">Mumbai Indians</option>
+                        <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+                        <option value="Chennai Super Kings">Chennai Super Kings</option>
+                        <option value="Rajasthan Royals">Rajasthan Royals</option>
+                        <option value="Kings XI Punjab">Kings XI Punjab</option>
+                        <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+                        <option value="Delhi Daredevils">Delhi Daredevils</option>
+                        <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+                    </select><br>
+                    <!-- Venue Dropdown -->
+                     {% csrf_token %}
+                    <select class="form-input align-center" name="Venue">
+                        <option value="none">--- Select a Cricket Stadium ---</option>
+                        <option value="M Chinnaswamy Stadium, Bangalore">M Chinnaswamy Stadium, Bangalore</option>
+                        <option value="Punjab Cricket Association Stadium, Mohali">Punjab Cricket Association Stadium, Mohali</option>
+                        <option value="Feroz Shah Kotla Stadium, Delhi">Feroz Shah Kotla Stadium, Delhi</option>
+                        <option value="Wankhede Stadium, Mumbai">Wankhede Stadium, Mumbai</option>
+                        <option value="Eden Gardens Stadium, Kolkata">Eden Gardens Stadium, Kolkata</option>
+                        <option value="Sawai Mansingh Stadium, Rajasthan">Sawai Mansingh Stadium, Rajasthan</option>
+                        <option value="Rajiv Gandhi International Stadium, Hyderabad">Rajiv Gandhi International Stadium, Hyderabad</option>
+                        <option value="M.A. Chidambaram Stadium, Chennai">M.A. Chidambaram Stadium, Chennai</option>
+                        <option value="Himachal Pradesh Cricket Association Stadium, Dharamshala">Himachal Pradesh Cricket Association Stadium, Dharamshala</option>
+                        <option value="Maharashtra Cricket Association Stadium, Pune">Maharashtra Cricket Association Stadium, Pune</option>
+                        <option value="Sardar Patel Stadium, Motera">Sardar Patel Stadium, Motera</option>
+                        <option value="Dubai International Cricket Stadium">Dubai International Cricket Stadium</option>
+                        <option value="Sharjah Cricket Stadium">Sharjah Cricket Stadium</option>
+                    </select><br>
+                    {% csrf_token %}
+                    <input class="form-input" type="text" name="overs" placeholder="Overs (>= 5.0) eg. 7.2"><br>
+                    <input class="form-input" type="text" name="runs" placeholder="Runs eg. 64"><br>
+                    <input class="form-input" type="text" name="wickets" placeholder="Wickets eg. 4"><br>
+                    <input class="form-input" type="text" name="runs_in_prev_5" placeholder="Runs scored in previous 5 Overs eg. 42"><br>
+                    <input class="form-input" type="text" name="wickets_in_prev_5" placeholder="Wickets taken in previous 5 Overs eg. 3"><br>
+
+			<input type="submit" class="myButton" value="Predict Score">
+        	</form>
+            </div>
+
+            <!-- IPL Banner - 2 -->
+            <div class='ipl-banner-right'>
+
+                <div class="slider-frame">
+                    <div class="slide-images-down">
+
+                        <!-- Image-1 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{% static '/images/ipl_img/rcb.png' %}" alt="Royal Challengers Bangalore">
+                        </div>
+                        <!-- Image-2 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{% static '/images/ipl_img/srh.png' %}" alt="Sunrisers Hyderabad">
+                        </div>
+                        <!-- Image-3 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{% static '/images/ipl_img/mi.png' %}" alt="Mumbai Indians">
+                        </div>
+                        <!-- Image-4 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{% static '/images/ipl_img/dc.png' %}" alt="Delhi Capitals">
+                        </div>
+                        <!-- Image-5 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{%static '/images/ipl_img/kkr.png' %}" alt="Kolkata Knight Riders">
+                        </div>
+                        <!-- Image-6 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{% static '/images/ipl_img/rr.png' %}" alt="Rajasthan Royals">
+                        </div>
+                        <!-- Image-7 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{% static '/images/ipl_img/kxip.png' %}" alt="Kings XI Punjab">
+                        </div>
+                        <!-- Image-8 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{% static '/images/ipl_img/csk.png' %}" alt="Chennai Super Kings">
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+      <!-- FOOTER -->
+      <div class="footer">
+         <div class="contact"> 
+               <a target="_blank" href="https://www.linkedin.com/in/gokul-patil-0a6a96189"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://github.com/gokul-patil0509/ODI-T20-IPL-First-Innings-Score-Prediction-Deployment"><i class="fab fa-github fa-lg contact-icon"></i></a>
+         </div>
+         <div class='description'>
+    		  <p>A Machine Learning Web App, Built with Django, Deployed using Heroku.</p>
+    	 </div>
+           <p class='footer-description'>Made with ❤️ by Gokul Patil.</p>
+      </div>
+
+    </body>
+</html>
