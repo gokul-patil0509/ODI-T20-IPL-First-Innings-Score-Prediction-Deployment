@@ -1,0 +1,1 @@
+web: gunicorn Cricket_First_Innings_Prediction.wsgi --log-file -
