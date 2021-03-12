@@ -12,7 +12,7 @@ Deployed at: _https://cricket-first-innings-score.herokuapp.com_
 
 • A glimpse of the web app:
 
- ![GIF](readme_resources/First_Innings_Score_Predictor_Web_App.gif)
+ ![GIF](readme_resources/odi-t20-ipl-web-app.gif)
  
 _**----- Important Note -----**_<br />
 • If you encounter this webapp as shown in the picture given below, it is occuring just because **free dynos for this particular month provided by Heroku have been completely used.** _You can access the webpage on 1st of the next month._<br />
