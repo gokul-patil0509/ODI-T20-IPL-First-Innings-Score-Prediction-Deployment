@@ -11,11 +11,9 @@ Deployed at: _https://cricket-first-innings-score.herokuapp.com_
 • Please do ⭐ the repository, if it helped you in anyway.
 
 
-
 • A glimpse of the web app:
 
  ![GIF](readme_resources/odi-t20-ipl-web-app.gif)
- 
  
  
 _**----- Important Note -----**_<br />
